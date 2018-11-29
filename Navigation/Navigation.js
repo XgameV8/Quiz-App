@@ -13,6 +13,7 @@ import CoursLang from "../Components/CoursLang";
 import CGU from "../Components/CGU";
 import Classement from "../Components/Classement";
 import Rewards from "../Components/Rewards";
+import ChoixCours from "../Components/ChoixCours";
 
 const Navigation = createStackNavigator(
     {
@@ -48,6 +49,9 @@ const Navigation = createStackNavigator(
         },
         ChoixQuiz: {
             screen: ChoixQuiz
+        },
+        ChoixCours: {
+            screen: ChoixCours
         },
         FicheMet: {
             screen: FicheMet
