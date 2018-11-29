@@ -1,11 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, ImageBackground} from 'react-native';
 import {Button} from "react-native-elements";
 
 export default class ChoixQuiz extends React.Component {
 
     render() {
         return (
+            <ImageBackground source={require('../assets/Images/wall.jpg')}
+                             style={{width: '100%', height: '100%'}}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <Image
@@ -13,29 +15,39 @@ export default class ChoixQuiz extends React.Component {
                     />
                     <Text style={styles.headerLabel}>Veuillez choisir une catégorie de Quiz</Text>
                 </View>
-                <View style={styles.buttonsContainer}>
-                    <TouchableOpacity
-                        style={styles.buttonsPlay}
-                        onPress={() => this.props.navigation.navigate('DevQuiz')}>
-                        <Text style={styles.buttonContactText}>Développement</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonsPlay}
-                                      onPress={() => this.props.navigation.navigate('DesignQuiz')}>
-                        <Text style={styles.buttonContactText}>Design</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonsPlay}
-                                      onPress={() => this.props.navigation.navigate('MarketingQuiz')}>
-                        <Text style={styles.buttonContactText}>Marketing</Text>
+                <View>
+                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuis')}>
+                    <Image
+                        source={require('../assets/Images/cours_dev.png')}
+
+                    />
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DesignQuiz')}>
+                    <Image
+                        source={require('../assets/Images/cours_design.png')}
+
+                    />
+                </TouchableOpacity>
+
+
+                    <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('MarketingQuiz')}>
+                        <Image
+                            source={require('../assets/Images/cours_market.png')}
+
+                        />
                     </TouchableOpacity>
                 </View>
-            </View>
+                </View>
+
+            </ImageBackground>
         )
     }
 }
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFCC66',
+
     },
     header: {
         alignItems: 'center',
@@ -47,22 +59,27 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#4267B2',
+        color: '#ffdc7f',
         marginTop: 50,
     },
-    buttonsContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        flexWrap: 'wrap',
-        marginTop: 80
-    },
-    buttonsPlay: {
-        width: 140,
+    buttonquiz: {
+        backgroundColor: '#ffdc7f',
+        borderRadius: 100,
+        shadowColor: '#000',
+        shadowOffset: { width: 2, height: 3 },
+        shadowOpacity: 0.6,
+        shadowRadius: 6,
+        alignItems:'center',
+        marginLeft:60,
+        marginTop:100,
+        width: 300,
         height: 80,
-        backgroundColor: '#4267B2',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 40,
+        justifyContent:'center',
+    },
+
+    textquiz: {
+        fontSize: 42,
+        color:'#000',
     },
     buttonContactContainer: {
         flex: 2,
