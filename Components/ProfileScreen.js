@@ -199,6 +199,7 @@ const styles = StyleSheet.create({
         shadowRadius: 6,
         alignItems:'center',
         marginLeft:60,
+        marginTop:30,
         width: 300,
         height: 80,
         justifyContent:'center'
