@@ -38,7 +38,7 @@ export default class ProfileScreen extends React.Component {
                             onPress={() => this.props.navigation.navigate('ShopCate')}>
                             <Image
                                 source={require('../assets/Images/money.png')}
-                              
+
                             />
                         </TouchableOpacity>
 
@@ -98,7 +98,7 @@ export default class ProfileScreen extends React.Component {
                         <Text style={styles.textquiz}>Cours</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixQuiz')}>
+                    <TouchableOpacity style={styles.buttonquiz} >
                         <Image
                             source={require('../assets/Images/lock_petit.png')}
                         />
@@ -160,17 +160,17 @@ const styles = StyleSheet.create({
     coinsContainer: {
         marginTop: 20,
         marginLeft: 20,
-        width: 10,
+        width: 20,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
     },
 
     quantityCoins: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
         marginLeft: 7,
-
+        color:'#ffdc7f'
     },
 
     userContainer: {
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
         marginTop:30,
         width: 300,
         height: 80,
-        justifyContent:'center'
+        justifyContent:'center',
     },
 
     textquiz: {

@@ -1,19 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, Button, StatusBar, ScrollView, Dimensions, TouchableOpacity, For } from 'react-native';
-import { FormLabel, FormInput, FormValidationMessage } from 'react-native-elements'
+import {
+    StyleSheet,
+    Text,
+    View,
+    Image,
+    Button,
+    StatusBar,
+    ScrollView,
+    Dimensions,
+    TouchableOpacity,
+    For,
+    ImageBackground,
+
+} from 'react-native';
 export default class CGU extends React.Component {
 
 
     render() {
         return (
-
             <ImageBackground source={require('../assets/Images/wall.jpg')}
                              style={{width: '100%', height: '100%'}}>
+            <ScrollView>
             <View style={styles.mainContainer}>
                 <Text style={styles.headerLabel}>Condition d'utilisation</Text>
 
                 <View>
-                    <Text>
+                    <Text style={styles.textCGU}>
                     Conditions générales d'utilisation du site
                     ARTICLE 1 : Objet
 
@@ -29,6 +41,7 @@ export default class CGU extends React.Component {
 
                     ARTICLE 2 : Mentions légales
 
+
                     L'édition du site Quizer est assurée par la Société Quizer [SAS / SA / SARL, etc.] au capital de 100.
 
                     Le Directeur de la publication est Monsieur Rudy Logre.
@@ -40,6 +53,7 @@ export default class CGU extends React.Component {
                     L'hébergeur du site Quizer est la Société Quizer [SAS / SA / SARL, etc.] au capital de 100 €.
 
                     ARTICLE 3 : Définitions
+
 
                     La présente clause a pour objet de définir les différents termes essentiels du contrat :
 
@@ -66,10 +80,10 @@ export default class CGU extends React.Component {
 
                     ARTICLE 5 : Données personnelles
 
+
                     Les informations demandées à l’inscription au site sont nécessaires et obligatoires pour la création du compte de l'Utilisateur. En particulier, l'adresse électronique pourra être utilisée par le site pour l'administration, la gestion et l'animation du service.
 
                     Le site assure à l'Utilisateur une collecte et un traitement d'informations personnelles dans le respect de la vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés. Le site est déclaré à la CNIL sous le numéro 1569873.
-
 
                     ARTICLE 6 : Responsabilité et force majeure
 
@@ -93,9 +107,11 @@ export default class CGU extends React.Component {
 
                     ARTICLE 8 : Évolution du contrat
 
+
                     Le site se réserve à tout moment le droit de modifier les clauses stipulées dans le présent contrat.
 
                     ARTICLE 9 : Durée
+
 
                     La durée du présent contrat est indéterminée. Le contrat produit ses effets à l'égard de l'Utilisateur à compter de l'utilisation du service.
 
@@ -116,6 +132,8 @@ export default class CGU extends React.Component {
                 </View>
 
             </View>
+            </ScrollView>
+            </ImageBackground>
         );
 
 
@@ -125,7 +143,6 @@ export default class CGU extends React.Component {
 const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
-        backgroundColor: '#ff9f44',
         alignItems: 'center',
     },
 
@@ -135,7 +152,11 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#FFFFFF',
+        color: '#ffdc7f',
     },
+    textCGU : {
+
+        color: '#FFF'
+    }
 
 });
