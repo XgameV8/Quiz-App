@@ -94,6 +94,16 @@ export default class ProfileScreen extends React.Component {
                             <Text style={styles.textquiz}>Jouer</Text>
                         </TouchableOpacity>
 
+                    <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixCours')}>
+                        <Text style={styles.textquiz}>Cours</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixQuiz')}>
+                        <Image
+                            source={require('../assets/Images/lock_petit.png')}
+                        />
+                    </TouchableOpacity>
+
 
 
                     <View style={styles.coursMainContainer}>
