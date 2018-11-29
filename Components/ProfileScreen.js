@@ -1,16 +1,17 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, ScrollView,} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, ScrollView,AsyncStorage,ImageBackground} from 'react-native';
 import ProgressBarAnimated from 'react-native-progress-bar-animated';
-import DevQuiz from './DevQuiz.js';
+
 
 
 
 export default class ProfileScreen extends React.Component {
-
-
-
-
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            coins: 0,
+        }
+    }
 
 
     render() {
@@ -21,20 +22,32 @@ export default class ProfileScreen extends React.Component {
             borderRadius: 5,
         };
 
+
+
         return (
-            <ScrollView style={styles.container}>
+            <ImageBackground source={require('../assets/Images/wall.jpg')}
+                             style={{width: '100%', height: '100%'}}>
+            <ScrollView>
+
+
+
                 <View style={styles.container}>
                     <View style={styles.coinsContainer}>
+
                         <TouchableOpacity
                             onPress={() => this.props.navigation.navigate('ShopCate')}>
                             <Image
                                 source={require('../assets/Images/coin.png')}
                             />
                         </TouchableOpacity>
+
                         <TouchableOpacity
                             onPress={() => this.props.navigation.navigate('ShopCate')}>
-                            <Text style={styles.quantityCoins}>{this.props.coins}</Text>
+                            <Text style={styles.quantityCoins}>{this.state.coins}</Text>
+
                         </TouchableOpacity>
+
+
                     </View>
                     <View style={styles.userContainer}>
                         <Image
@@ -42,19 +55,26 @@ export default class ProfileScreen extends React.Component {
                         />
                         <Text style={{fontSize: 17, color: '#FFF'}}>{this.props.displayName}</Text>
                     </View>
+
                     <View style={styles.achievementsMainContainer}>
+
+
                         <View style={styles.achievementsContainer}>
+
                             <ProgressBarAnimated
                                 {...progressCustomStyles}
                                 width={barWidth}
                                 value={20}
                                 backgroundColorOnComplete="#6CC644"
                             />
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('Classement')}>
                             <View style={styles.img}>
                                 <Image
                                     source={require('../assets/Images/podium.png')}
                                 />
                             </View>
+                            </TouchableOpacity>
                         </View>
                         <View style={styles.achievementsContainer}>
                             <ProgressBarAnimated
@@ -70,9 +90,8 @@ export default class ProfileScreen extends React.Component {
                     </View>
                     <View style={styles.buttonsContainer}>
                         <TouchableOpacity
-                            style={styles.buttonsPlay}
                             onPress={() => this.props.navigation.navigate('ChoixQuiz')}>
-                            <Text style={styles.buttonsText}>Jouer</Text>
+                            <Text style={{fontSize: 42, color:'#000', }}>Jouer</Text>
                         </TouchableOpacity>
                     </View>
                     <View style={styles.coursMainContainer}>
@@ -83,6 +102,7 @@ export default class ProfileScreen extends React.Component {
                             style={styles.buttonsCours}>
                             <Image
                                 source={require('../assets/Images/code.png')}
+
                             />
                             <Text style={styles.buttonsCoursText}>Dev</Text>
                         </TouchableOpacity>
@@ -115,6 +135,7 @@ export default class ProfileScreen extends React.Component {
                     </View>
                 </View>
             </ScrollView>
+            </ImageBackground>
         );
     }
 }
@@ -122,7 +143,6 @@ export default class ProfileScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffcc66',
     },
 
     coinsContainer: {
@@ -159,9 +179,17 @@ const styles = StyleSheet.create({
     },
 
     buttonsContainer: {
-        marginTop: 70,
-        flexDirection: 'row',
-        justifyContent: 'space-around'
+        backgroundColor: '#ffdc7f',
+        borderRadius: 100,
+        shadowColor: '#000',
+        shadowOffset: { width: 2, height: 3 },
+        shadowOpacity: 0.6,
+        shadowRadius: 6,
+        alignItems:'center',
+        marginLeft:60,
+        width: 300,
+        height: 80,
+        justifyContent:'center'
     },
 
     buttonsPlay: {
@@ -246,6 +274,6 @@ const styles = StyleSheet.create({
     img: {
 
         marginBottom: 10,
-    }
+    },
 
 });

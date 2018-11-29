@@ -5,6 +5,7 @@
     "slug": "Appli",
     "privacy": "public",
     "sdkVersion": "30.0.0",
+    "facebookScheme":"fb409378282933975",
     "platforms": [
       "ios",
       "android"

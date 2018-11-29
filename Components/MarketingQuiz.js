@@ -10,6 +10,7 @@ export default class DevQuiz extends React.Component {
         this.state = ({
             count: 0,
             response: false,
+            coins:0,
             score: 0,
             questionNumber: 0,
             visible: false,
@@ -38,6 +39,7 @@ export default class DevQuiz extends React.Component {
         if (this.state.questionNumber === true) {
             this.setState({
                 score: this.state.score + 1,
+                coins: this.state.coins + 100,
             })
         }
         else {
@@ -102,6 +104,9 @@ export default class DevQuiz extends React.Component {
                         </View>
                         <View style={{flex: 1, justifyContent:'space-between'}}>
                             <Text style={styles.headerLabel}>Votre score est de {this.state.score} / 10</Text>
+                        </View>
+                        <View style={{flex: 1, justifyContent:'space-around'}}>
+                            <Text style={styles.headerLabel}>Vous avez gagner {this.state.coins} coins</Text>
                         </View>
                             <View style={styles.buttonNextGame}>
                                 <TouchableOpacity

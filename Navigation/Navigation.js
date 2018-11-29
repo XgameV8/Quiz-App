@@ -11,7 +11,8 @@ import DesignQuiz from "../Components/DesignQuiz";
 import FicheMet from "../Components/FicheMet";
 import CoursLang from "../Components/CoursLang";
 import CGU from "../Components/CGU";
-
+import Classement from "../Components/Classement";
+import Rewards from "../Components/Rewards";
 
 const Navigation = createStackNavigator(
     {
@@ -57,13 +58,21 @@ const Navigation = createStackNavigator(
         CGU: {
             screen: CGU
         },
+
+        Classement: {
+            screen: Classement
+        },
+
+        Rewards: {
+          screen: Rewards
+        },
     },
 
     {
         initialRouteName: "HomeScreen",
         navigationOptions: {
             headerStyle: {
-                backgroundColor: '#FFCC66'
+                backgroundColor: '#143b58'
             },
             headerTintColor: "#FFF",
         }

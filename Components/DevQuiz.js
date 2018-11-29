@@ -1,6 +1,6 @@
 import {devJsonData} from "../assets/Data/devQuizData";
 import React from "react";
-import {StyleSheet, Text, TouchableHighlight, TouchableOpacity, View, Modal, Image} from "react-native";
+import {StyleSheet, Text, TouchableHighlight, TouchableOpacity, View, Modal, Image, AsyncStorage,} from "react-native";
 
 export default class DevQuiz extends React.Component {
 
@@ -15,6 +15,25 @@ export default class DevQuiz extends React.Component {
             visible: false,
         })
     }
+
+
+    async getKey() {
+        try {
+            const value = await AsyncStorage.getItem('Coins');
+            this.setState({coins: value});
+        } catch (error) {
+            console.log("Error retrieving data" + error);
+        }
+    }
+
+   async saveKey(value) {
+        try {
+            await AsyncStorage.setItem('Coins', value);
+        } catch (error) {
+            console.log("Error saving data" + error);
+        }
+    }
+
 
     _nextQuestion = () => {
         this._scoring();
@@ -34,11 +53,12 @@ export default class DevQuiz extends React.Component {
         }
     };
 
+
     _scoring = () => {
         if (this.state.questionNumber === true) {
             this.setState({
                 score: this.state.score + 1,
-                coins : this.state.coins + 100,
+                coins: this.state.coins + 100,
             })
         }
         else {
@@ -46,7 +66,10 @@ export default class DevQuiz extends React.Component {
         }
     };
 
+
+
     render() {
+
         console.log(this.state.score);
         return (
             <View style={styles.mainContainer}>
@@ -101,27 +124,52 @@ export default class DevQuiz extends React.Component {
                                 style={{marginBottom: 30}}
                             />
                         </View>
-                        <View style={{flex: 1, justifyContent:'space-between'}}>
+                        <View style={{flex: 1, justifyContent: 'space-between'}}>
                             <Text style={styles.headerLabel}>Votre score est de {this.state.score} / 10</Text>
+                        </View>
+                        <View style={{flex: 1, justifyContent: 'space-around'}}>
+                            <Text style={styles.headerLabel}>Vous avez gagner {this.state.coins} coins</Text>
                         </View>
                         <View style={styles.buttonNextGame}>
                             <TouchableOpacity
                                 full
                                 rounded
                                 primary
-                                onPress= {() => {
+                                onPress={() => {
                                     this.props.navigation.navigate('ChoixQuiz');
                                     this.setState({visible: false})
                                 }}
                             >
-                                <Text style={{color:'#FFF', fontSize: 14,
-                                    fontWeight: 'bold' }}>Jouer une autre partie</Text>
+                                <Text style={{
+                                    color: '#FFF', fontSize: 14,
+                                    fontWeight: 'bold'
+                                }}>Jouer une autre partie</Text>
 
                             </TouchableOpacity>
                         </View>
+                            <TouchableOpacity
+                                full
+                                rounded
+                                primary
+                                onPress={() => {
+                                    this.props.navigation.navigate('ProfileScreen');
+                                    this.setState({visible: false},
+                                        this.saveKey()
+
+                                )
+                                }}
+                            >
+                                <Text style={{
+                                    color: '#FFF', fontSize: 14,
+                                    fontWeight: 'bold', justifyContent: 'space-between'
+                                }}>Retour à l'accueil</Text>
+
+                            </TouchableOpacity>
+
                     </View>
                 </Modal>
             </View>
+
         );
     }
 };

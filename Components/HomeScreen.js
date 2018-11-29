@@ -1,6 +1,6 @@
 import React from 'react';
 import * as firebase from 'firebase';
-import {StyleSheet, Text, View, Image, TouchableOpacity, StatusBar, SafeAreaView,} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 
 export default class HomeScreen extends React.Component {
@@ -23,7 +23,7 @@ export default class HomeScreen extends React.Component {
 
     async loginWithFacebook() {
         const {type, token} = await Expo.Facebook.logInWithReadPermissionsAsync
-        ('1902257816476632', {permissions: ['public_profile']})
+        ('1902257816476632', {permissions: ['public_profile', 'profileURL']})
         if (type === 'success') {
             const credential = firebase.auth.FacebookAuthProvider.credential(token);
             firebase.auth().signInAndRetrieveDataWithCredential(credential).catch((error) => {
