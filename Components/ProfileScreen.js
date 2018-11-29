@@ -37,7 +37,8 @@ export default class ProfileScreen extends React.Component {
                         <TouchableOpacity
                             onPress={() => this.props.navigation.navigate('ShopCate')}>
                             <Image
-                                source={require('../assets/Images/coin.png')}
+                                source={require('../assets/Images/money.png')}
+                              
                             />
                         </TouchableOpacity>
 
@@ -47,8 +48,8 @@ export default class ProfileScreen extends React.Component {
 
                         </TouchableOpacity>
 
-
                     </View>
+
                     <View style={styles.userContainer}>
                         <Image
                             source={require('../assets/Images/user.png')}
@@ -88,12 +89,13 @@ export default class ProfileScreen extends React.Component {
                             />
                         </View>
                     </View>
-                    <View style={styles.buttonsContainer}>
-                        <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('ChoixQuiz')}>
-                            <Text style={{fontSize: 42, color:'#000', }}>Jouer</Text>
+
+                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixQuiz')}>
+                            <Text style={styles.textquiz}>Jouer</Text>
                         </TouchableOpacity>
-                    </View>
+
+
+
                     <View style={styles.coursMainContainer}>
                         <Text style={{fontSize: 18, fontWeight: 'bold', color: '#4267B2'}}>Cours disponibles</Text>
                     </View>
@@ -148,7 +150,7 @@ const styles = StyleSheet.create({
     coinsContainer: {
         marginTop: 20,
         marginLeft: 20,
-        width: 200,
+        width: 10,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
@@ -178,7 +180,7 @@ const styles = StyleSheet.create({
 
     },
 
-    buttonsContainer: {
+    buttonquiz: {
         backgroundColor: '#ffdc7f',
         borderRadius: 100,
         shadowColor: '#000',
@@ -192,15 +194,9 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
 
-    buttonsPlay: {
-        width: 250,
-        height: 70,
-        backgroundColor: '#4267B2',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 90,
-
-
+    textquiz: {
+        fontSize: 42,
+        color:'#000',
     },
 
     buttonsText: {

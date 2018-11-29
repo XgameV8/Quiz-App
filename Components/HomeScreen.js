@@ -1,6 +1,6 @@
 import React from 'react';
 import * as firebase from 'firebase';
-import {StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground} from 'react-native';
 
 
 export default class HomeScreen extends React.Component {
@@ -34,9 +34,11 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
+            <ImageBackground source={require('../assets/Images/wall.jpg')}
+                             style={{width: '100%', height: '100%'}}>
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <Image
+                    <Image style={styles.imglogo}
                         source={require('../assets/Images/logo.png')}
                         style={{marginBottom: 30}}
                     />
@@ -56,6 +58,7 @@ export default class HomeScreen extends React.Component {
                     </TouchableOpacity>
                 </View>
             </View>
+            </ImageBackground>
         );
     }
 }
@@ -63,7 +66,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        backgroundColor: '#FFCC66',
     },
     header: {
         flex: 1,
@@ -108,10 +110,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         color: '#FFF',
     },
+
+    imglogo: {
+        justifyContent: 'center',
+        alignItems: 'center',
+
+
+
+    },
+
     img: {
         justifyContent: 'center',
         alignItems: 'center'
 
     },
-
 });
