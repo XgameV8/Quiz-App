@@ -7,11 +7,13 @@ export default class CGU extends React.Component {
     render() {
         return (
 
+            <ImageBackground source={require('../assets/Images/wall.jpg')}
+                             style={{width: '100%', height: '100%'}}>
             <View style={styles.mainContainer}>
                 <Text style={styles.headerLabel}>Condition d'utilisation</Text>
 
                 <View>
-                    <text>
+                    <Text>
                     Conditions générales d'utilisation du site
                     ARTICLE 1 : Objet
 
@@ -110,7 +112,7 @@ export default class CGU extends React.Component {
                     Le membre reste titulaire de l’intégralité de ses droits de propriété intellectuelle. Mais en publiant une publication sur le site, il cède à la société éditrice le droit non exclusif et gratuit de représenter, reproduire, adapter, modifier, diffuser et distribuer sa publication, directement ou par un tiers autorisé, dans le monde entier, sur tout support (numérique ou physique), pour la durée de la propriété intellectuelle. Le Membre cède notamment le droit d'utiliser sa publication sur internet et sur les réseaux de téléphonie mobile.
 
                     La société éditrice s'engage à faire figurer le nom du membre à proximité de chaque utilisation de sa publication.
-                    </text>
+                    </Text>
                 </View>
 
             </View>
@@ -133,7 +135,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#4267B2',
+        color: '#FFFFFF',
     },
 
 });
