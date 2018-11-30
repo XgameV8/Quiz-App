@@ -3,48 +3,48 @@ export const devJsonData = {
     title: "htmlM",
     questions: [
         {
-            title: "Que signifie le sigle WWW ? ",
+            title: "En quelle année est sortie la première version de CSS ?",
             answer: [
-                {nom: "Wild Wide Web", goodAnswer: false},
-                {nom: "World Wildlife Web", goodAnswer: false},
-                {nom: "World Wide Web", goodAnswer: true},
-                {nom: "Ché pô", goodAnswer: false}
+                {nom: "1987", goodAnswer: false},
+                {nom: "1985", goodAnswer: false},
+                {nom: "1996", goodAnswer: true},
+                {nom: "1999", goodAnswer: false}
             ]
         },
         {
-            title: "Que signifie CSS ?",
+            title: "En quelle année HTML5 a-t-elle été mis en fonction ?",
             answer: [
-                {nom: "Choucroute et Saucisses du Sud", goodAnswer: false},
-                {nom: "Cascading Simple Samples", goodAnswer: false},
-                {nom: "Create Simple Samples", goodAnswer: false},
-                {nom: "Cascading Style Sheets", goodAnswer: true}
+                {nom: "2012", goodAnswer: false},
+                {nom: "2013", goodAnswer: false},
+                {nom: "2017", goodAnswer: false},
+                {nom: "2014", goodAnswer: true}
             ]
         },
         {
-            title: "Lequel de ces éléments est considéré comme appartenant au Back-End ?",
+            title: "En quelle année CSS3 a-t-elle été mis en fonction ?",
             answer: [
-                {nom: "Un fichier HTML", goodAnswer: false},
-                {nom: "Une interface graphique", goodAnswer: false},
-                {nom: "Un script PHP", goodAnswer: true},
-                {nom: "Un script Javascript", goodAnswer: false}
+                {nom: "1997", goodAnswer: false},
+                {nom: "1998", goodAnswer: false},
+                {nom: "1998", goodAnswer: true},
+                {nom: "2000", goodAnswer: false}
             ]
         },
         {
-            title: "A quoi sert le langage CSS ?",
+            title: "Quelles sociétés ont développés le HTML ?",
             answer: [
-                {nom: "À réaliser des pages dynamiques", goodAnswer: false},
-                {nom: "À ajouter du style à nos pages HTML", goodAnswer: true},
-                {nom: "À réaliser des pages dynamiques", goodAnswer: false},
-                {nom: "À rien", goodAnswer: false}
+                {nom: "World Wide Web et Microsoft", goodAnswer: false},
+                {nom: "World Wide Web et WHATWG", goodAnswer: true},
+                {nom: "Microsoft et WHATWG", goodAnswer: false},
+                {nom: "Des contributeurs ", goodAnswer: false}
             ]
         },
         {
-            title: "Quelle balise de section permet de regrouper un contenu tangentiel au contenu principal du document ?",
+            title: "Le CSS permet la mise en place de scripts :",
             answer: [
-                {nom: "aside", goodAnswer: true},
-                {nom: "section id=sidebar", goodAnswer: false},
-                {nom: "details", goodAnswer: false},
-                {nom: "sidebar", goodAnswer: false}
+                {nom: "Vrai", goodAnswer: false},
+                {nom: "Faux", goodAnswer: true},
+                {nom: "Peut etre ", goodAnswer: false},
+                {nom: "ARRETE DE ME POSER DES QUESTIONS ", goodAnswer: false}
             ]
         },
     ]
