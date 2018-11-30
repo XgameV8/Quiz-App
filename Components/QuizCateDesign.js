@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Image, ImageBackground} from 'react-native';
 
-export default class ShopCateDesign extends React.Component {
+export default class QuizCateDesign extends React.Component {
     render() {
         return (
             <ImageBackground source={require('../assets/Images/wall.jpg')}
