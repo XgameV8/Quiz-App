@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity, Dimensions, ScrollView,AsyncStorage,ImageBackground} from 'react-native';
-import ProgressBarAnimated from 'react-native-progress-bar-animated';
 
 
 

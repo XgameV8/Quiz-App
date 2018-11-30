@@ -18,6 +18,7 @@ import ChoixCours from "../Components/ChoixCours";
 import QuizCateDev from '../Components/QuizCateDev';
 import DevQuizDiff from '../Components/DevQuizDiff';
 import QuizCateDesign from '../Components/QuizCateDesign';
+import coursHTML from '../Components/coursHTML';
 
 
 
@@ -39,6 +40,10 @@ const Navigation = createStackNavigator(
         },
         ShopCateDev: {
             screen: ShopCateDev
+        },
+
+        coursHTML: {
+            screen: coursHTML
         },
 
         ShopCateDesign: {
