@@ -47,51 +47,7 @@ export const marketingJsonData = {
                 {nom: "Il n’y a pas vraiment de différences IMPORTANTE entre les deux", goodAnswer: false}
             ]
         },
-        {
-            title: "Quel nom de domaine aura l’impact le plus positif sur votre référencement ?",
-            answer: [
-                {nom: "Un nom très proche de mon principal concurrent.", goodAnswer: false},
-                {nom: "Le nom de mon produit ou service phare.", goodAnswer: false},
-                {nom: "Le nom de ma société", goodAnswer: false},
-                {nom: "Une requête naturelle dont les mots sont séparés par des tirets du 6 « – »", goodAnswer: true}
-            ]
-        },
-        {
-            title: "Lors d’une campagne « search » (affichage en résultats de recherche), vous ne payez que lorsque l’internaute",
-            answer: [
-                {nom: "Voit l’annonce sur la page des résultats.", goodAnswer: false},
-                {nom: "Clique sur votre annonce", goodAnswer: true},
-                {nom: "Effectue un achat sur votre site.", goodAnswer: false},
-                {nom: "Voit l’annonce sur la page des résultats.", goodAnswer: false}
-            ]
-        },
-        {
-            title: "Laquelle de ces plateformes de diffusion d’emails n’existe pas ?",
-            answer: [
-                {nom: "MailJet", goodAnswer: false},
-                {nom: "Sarbacane", goodAnswer: false},
-                {nom: "Mail Focus", goodAnswer: true},
-                {nom: "Adobe Campaign", goodAnswer: false}
-            ]
-        },
-        {
-            title: "Google Analytics ne me permet pas",
-            answer: [
-                {nom: "De connaître leurs adresses IP", goodAnswer: true},
-                {nom: "De connaître les centres d’intérêt des internautes.", goodAnswer: false},
-                {nom: "D’être averti par email à chaque visite sur ma page d’accueil.", goodAnswer: false},
-                {nom: "De connaître leurs origines géographiques.", goodAnswer: false}
-            ]
-        },
-        {
-            title: "A partir de quel taux d’ouverture peut-on être satisfait lors d'une campagne d'emailing ",
-            answer: [
-                {nom: "5%", goodAnswer: false},
-                {nom: "25%", goodAnswer: false},
-                {nom: "30%", goodAnswer: true},
-                {nom: "40%", goodAnswer: false}
-            ]
-        }
+
     ]
 
 };

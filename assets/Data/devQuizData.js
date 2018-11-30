@@ -47,51 +47,6 @@ export const devJsonData = {
                 {nom: "sidebar", goodAnswer: false}
             ]
         },
-        {
-            title: "Quel sera la sortie du code suivant ?\n" +
-            "print (int) ( (0.1+0.7) * 10);",
-            answer: [
-                {nom: "7", goodAnswer: true},
-                {nom: "8", goodAnswer: false},
-                {nom: "9", goodAnswer: false},
-                {nom: "0", goodAnswer: false}
-            ]
-        },
-        {
-            title: "Parmi ces types, lesquels font partie des 4 types scalaires de PHP ?",
-            answer: [
-                {nom: "boolean", goodAnswer: true},
-                {nom: "array", goodAnswer: false},
-                {nom: "object", goodAnswer: false},
-                {nom: "Tous ces types en font partie", goodAnswer: false}
-            ]
-        },
-        {
-            title: "Quel est l'extension par defaut d'un fichier de configuration Apache?",
-            answer: [
-                {nom: ".xml", goodAnswer: false},
-                {nom: "..txt", goodAnswer: false},
-                {nom: ".con", goodAnswer: false},
-                {nom: ".conf", goodAnswer: true}
-            ]
-        },
-        {
-            title: "Quelle est le nom de la fonction PHP qui retourne true lorsque qu'une valeur existe dans un tableau et false lorsqu'elle n'y est pas présente ?",
-            answer: [
-                {nom: "isset", goodAnswer: false},
-                {nom: "intlIterator::valid", goodAnswer: false},
-                {nom: "is_bool", goodAnswer: false},
-                {nom: "in_array", goodAnswer: true}
-            ]
-        },
-        {
-            title: "Quel port est utilisé par defaut lors d'une connexion https",
-            answer: [
-                {nom: "80", goodAnswer: false},
-                {nom: "213", goodAnswer: false},
-                {nom: "443", goodAnswer: true},
-                {nom: "404", goodAnswer: false}
-            ]
-        }
     ]
+
 };

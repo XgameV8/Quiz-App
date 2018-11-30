@@ -52,10 +52,11 @@ const styles = StyleSheet.create({
     header: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 20
+        marginTop: 20,
+
     },
     headerLabel: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
         shadowRadius: 6,
         alignItems:'center',
         marginLeft:60,
-        marginTop:100,
+        marginTop:50,
         width: 300,
         height: 80,
         justifyContent:'center',

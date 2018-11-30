@@ -215,7 +215,6 @@ const styles = StyleSheet.create({
         /* VUE SCORE */
         ModalScore: {
         flex: 1,
-        backgroundColor: '#FFCC66',
         alignItems: 'center',
         justifyContent: 'center',
     },
