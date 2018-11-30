@@ -14,6 +14,8 @@ import CGU from "../Components/CGU";
 import Classement from "../Components/Classement";
 import Rewards from "../Components/Rewards";
 import ChoixCours from "../Components/ChoixCours";
+import QuizCate from '../Components/QuizCate'
+
 
 const Navigation = createStackNavigator(
     {
@@ -29,6 +31,10 @@ const Navigation = createStackNavigator(
         },
         ShopCate: {
             screen: ShopCate
+        },
+
+        QuizCate: {
+            screen: QuizCate
         },
 
         Contact: {
