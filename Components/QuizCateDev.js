@@ -11,7 +11,7 @@ export default class QuizCateDev extends React.Component {
                         <Text style={styles.headerLabel}>Choisir Catégories</Text>
                     </View>
                     <View style={styles.coursContainer}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('DevQuiz')}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('DevQuizDiff')}>
                             <Image
                                 source={require('../assets/Images/bouton_html.png')}
 

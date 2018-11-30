@@ -13,17 +13,17 @@ export default class ChoixCours extends React.Component {
                         <Image
                             source={require('../assets/Images/logo.png')}
                         />
-                        <Text style={styles.headerLabel}>Veuillez choisir une catégorie de Quiz</Text>
+                        <Text style={styles.headerLabel}>Veuillez choisir domaine</Text>
                     </View>
                     <View>
-                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuis')}>
+                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ShopCateDev')}>
                             <Image
                                 source={require('../assets/Images/cours_dev.png')}
 
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DesignQuiz')}>
+                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ShopCateDesign')}>
                             <Image
                                 source={require('../assets/Images/cours_design.png')}
 

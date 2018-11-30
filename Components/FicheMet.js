@@ -4,33 +4,11 @@ import {StyleSheet, Text, View, Image, TouchableOpacity, ScrollView} from 'react
 
 
 export default class FicheMet extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {coins: 5000}
-        this.update = this.update.bind(this)
-    }
-    update() {
-        this.setState({ coins: this.state.coins - 100 })
-    }
+
     render() {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                        <View style={styles.coinsContainer}>
-
-                            <TouchableOpacity>
-
-                                <Image
-                                    source={require('../assets/Images/coin.png')}
-                                />
-                            </TouchableOpacity>
-
-                            <TouchableOpacity
-                                >
-                                <Text style={styles.quantityCoins}>{this.state.coins}</Text>
-
-                            </TouchableOpacity>
-                        </View>
                     <View style={styles.answersContainer}>
                         <View style={styles.containerShop}>
                             <TouchableOpacity style={styles.answersButtons}>

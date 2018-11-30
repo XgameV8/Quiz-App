@@ -11,7 +11,7 @@ export default class ShopCateDev extends React.Component {
                     <Text style={styles.headerLabel}>Choisir Catégories</Text>
                 </View>
                 <View style={styles.coursContainer}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('FicheMet')} >
                         <Image
                             source={require('../assets/Images/bouton_html.png')}
 

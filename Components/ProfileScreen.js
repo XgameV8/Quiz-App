@@ -16,12 +16,6 @@ export default class ProfileScreen extends React.Component {
 
     render() {
 
-        const barWidth = Dimensions.get('screen').width - 200;
-        const progressCustomStyles = {
-            backgroundColor: 'white',
-            borderRadius: 5,
-        };
-
 
 
         return (
@@ -33,74 +27,37 @@ export default class ProfileScreen extends React.Component {
 
                 <View style={styles.container}>
                     <View style={styles.coinsContainer}>
-
-                        <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('ShopCateDev')}>
                             <Image
                                 source={require('../assets/Images/money.png')}
 
                             />
-                        </TouchableOpacity>
 
-                        <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('ShopCateDev')}>
+
+
                             <Text style={styles.quantityCoins}>{this.state.coins}</Text>
 
-                        </TouchableOpacity>
+                        <View style={styles.xpContainer}>
+
+                            <TouchableOpacity
+                            >
+                                <Image
+                                    source={require('../assets/Images/xp_bar.png')}
+
+                                />
+                            </TouchableOpacity>
+
+                        </View>
 
                     </View>
-                    <View style={styles.xpContainer}>
 
-                        <TouchableOpacity
-               >
-                            <Image
-                                source={require('../assets/Images/xp_bar.png')}
-
-                            />
-                        </TouchableOpacity>
-
-                    </View>
                     <View style={styles.userContainer}>
+
                         <Image
                             source={require('../assets/Images/user.png')}
                         />
-                        <Text style={{fontSize: 17, color: '#FFF'}}>{this.props.displayName}</Text>
                     </View>
 
-                    <View style={styles.achievementsMainContainer}>
 
-
-                        <View style={styles.achievementsContainer}>
-
-                            <ProgressBarAnimated
-                                {...progressCustomStyles}
-                                width={barWidth}
-                                value={20}
-                                backgroundColorOnComplete="#6CC644"
-                            />
-                            <TouchableOpacity
-                                onPress={() => this.props.navigation.navigate('Classement')}>
-                            <View style={styles.img}>
-                                <Image
-                                    source={require('../assets/Images/podium.png')}
-                                />
-                            </View>
-                            </TouchableOpacity>
-                        </View>
-                        <View style={styles.achievementsContainer}>
-                            <ProgressBarAnimated
-                                {...progressCustomStyles}
-                                width={barWidth}
-                                value={20}
-                                backgroundColorOnComplete="#6CC644"
-                            />
-                            <View style={styles.img}>
-                            <Image
-                                source={require('../assets/Images/trophy.png')}
-                            />
-                            </View>
-                        </View>
-                    </View>
 
                         <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixQuiz')}>
                             <Text style={styles.textquiz}>Jouer</Text>
@@ -117,34 +74,6 @@ export default class ProfileScreen extends React.Component {
                     </TouchableOpacity>
 
 
-
-                    <View style={styles.coursMainContainer}>
-                        <Text style={{fontSize: 18, fontWeight: 'bold', color: '#4267B2'}}>Cours disponibles</Text>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/code.png')}
-
-                            />
-                            <Text style={styles.buttonsCoursText}>Dev</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
                     <View style={styles.ContainerEnd}>
                         <View>
                             <TouchableOpacity style={styles.buttonContact}
@@ -172,7 +101,7 @@ const styles = StyleSheet.create({
     coinsContainer: {
         marginTop: 20,
         marginLeft: 20,
-        width: 20,
+        width: 300,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
@@ -186,21 +115,10 @@ const styles = StyleSheet.create({
     },
 
     userContainer: {
-        marginTop: 50,
         alignItems: 'center',
+        justifyContent:'center'
     },
 
-    achievementsMainContainer: {
-        marginTop: 50,
-        flexDirection: 'column',
-    },
-
-    achievementsContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-
-    },
 
     buttonquiz: {
         backgroundColor: '#ffdc7f',
@@ -228,18 +146,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 
-    coursMainContainer: {
-        marginTop: 70,
-        alignItems: 'center',
-
-    },
-
-    coursContainer: {
-        marginTop: 20,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-
-    },
 
     ContainerEnd: {
         marginTop: 20,
@@ -283,23 +189,20 @@ const styles = StyleSheet.create({
     buttonCondition: {
         width: 250,
         height: 50,
-        marginTop: 30,
+        marginTop: 20,
         backgroundColor: '#4267B2',
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,
     },
 
-    img: {
-
-        marginBottom: 12,
-        marginLeft:15,
-    },
 
     xpContainer: {
-        justifyContent:'flex-end',
-        flexDirection: 'row',
-        marginLeft: 20,
+        justifyContent:'space-between',
+        marginLeft:170
+
+
+
     }
 
 });

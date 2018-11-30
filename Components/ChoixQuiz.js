@@ -17,7 +17,7 @@ export default class ChoixQuiz extends React.Component {
                     <Image
                         source={require('../assets/Images/logo.png')}
                     />
-                    <Text style={styles.headerLabel}>Veuillez choisir une catégorie de Quiz</Text>
+                    <Text style={styles.headerLabel}>Veuillez choisir une catégorie de quiz</Text>
                 </View>
                 <View>
                 <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('QuizCateDev')}>
@@ -27,7 +27,7 @@ export default class ChoixQuiz extends React.Component {
                     />
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DesignQuiz')}>
+                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('QuizCateDesign')}>
                     <Image
                         source={require('../assets/Images/cours_design.png')}
 

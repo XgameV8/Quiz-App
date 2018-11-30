@@ -4,6 +4,7 @@ import ProfileScreen from '../Components/ProfileScreen'
 import HomeScreen from '../Components/HomeScreen'
 import LoginForm from '../Components/LoginForm'
 import ShopCateDev from '../Components/ShopCateDev'
+import ShopCateDesign from '../Components/ShopCateDesign'
 import Contact from '../Components/Contact'
 import DevQuiz from '../Components/DevQuiz'
 import MarketingQuiz from "../Components/MarketingQuiz";
@@ -14,7 +15,14 @@ import CGU from "../Components/CGU";
 import Classement from "../Components/Classement";
 import Rewards from "../Components/Rewards";
 import ChoixCours from "../Components/ChoixCours";
-import QuizCateDev from '../Components/QuizCateDev'
+import QuizCateDev from '../Components/QuizCateDev';
+import DevQuizDiff from '../Components/DevQuizDiff';
+import QuizCateDesign from '../Components/QuizCateDesign';
+
+
+
+
+
 
 
 const Navigation = createStackNavigator(
@@ -33,8 +41,19 @@ const Navigation = createStackNavigator(
             screen: ShopCateDev
         },
 
+        ShopCateDesign: {
+            screen: ShopCateDesign
+        },
+        DevQuizDiff: {
+            screen: DevQuizDiff
+        },
+
+
         QuizCateDev: {
             screen: QuizCateDev
+        },
+        QuizCateDesign: {
+            screen: QuizCateDesign
         },
 
         Contact: {
