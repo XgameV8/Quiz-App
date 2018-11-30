@@ -1,6 +1,16 @@
 import {devJsonData} from "../assets/Data/devQuizData";
 import React from "react";
-import {StyleSheet, Text, TouchableHighlight, TouchableOpacity, View, Modal, Image, AsyncStorage,} from "react-native";
+import {
+    StyleSheet,
+    Text,
+    TouchableHighlight,
+    TouchableOpacity,
+    View,
+    Modal,
+    Image,
+    AsyncStorage,
+    ImageBackground,
+} from "react-native";
 
 export default class DevQuiz extends React.Component {
 
@@ -16,23 +26,6 @@ export default class DevQuiz extends React.Component {
         })
     }
 
-
-    async getKey() {
-        try {
-            const value = await AsyncStorage.getItem('Coins');
-            this.setState({coins: value});
-        } catch (error) {
-            console.log("Error retrieving data" + error);
-        }
-    }
-
-   async saveKey(value) {
-        try {
-            await AsyncStorage.setItem('Coins', value);
-        } catch (error) {
-            console.log("Error saving data" + error);
-        }
-    }
 
 
     _nextQuestion = () => {
@@ -72,6 +65,8 @@ export default class DevQuiz extends React.Component {
 
         console.log(this.state.score);
         return (
+            <ImageBackground source={require('../assets/Images/wall.jpg')}
+                             style={{width: '100%', height: '100%'}}>
             <View style={styles.mainContainer}>
                 <View style={styles.questionContainer}>
                     <Text style={{
@@ -154,7 +149,6 @@ export default class DevQuiz extends React.Component {
                                 onPress={() => {
                                     this.props.navigation.navigate('ProfileScreen');
                                     this.setState({visible: false},
-                                        this.saveKey()
 
                                 )
                                 }}
@@ -169,6 +163,7 @@ export default class DevQuiz extends React.Component {
                     </View>
                 </Modal>
             </View>
+            </ImageBackground>
 
         );
     }
@@ -177,15 +172,13 @@ export default class DevQuiz extends React.Component {
 const styles = StyleSheet.create({
         mainContainer: {
         flex: 1,
-        backgroundColor: '#FFCC66',
         alignItems: 'center',
-        justifyContent: 'space-around'
     },
         /* CONTAINER QUESTION */
         questionContainer: {
         width: 300,
         height: 150,
-        marginTop: 50,
+        marginTop: 30,
         borderRadius: 5,
         alignItems: 'center',
         justifyContent: 'center',
@@ -193,7 +186,6 @@ const styles = StyleSheet.create({
     },
         /* Answers Container */
         answersContainer: {
-        flex: 2,
         marginTop: 50,
     },
         /* Answers Buttons */
@@ -208,6 +200,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#4267B2',
         width: 150,
         height: 50,
+        marginTop: 20,
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: 10,

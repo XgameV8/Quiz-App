@@ -6,9 +6,13 @@ export default class ChoixQuiz extends React.Component {
 
     render() {
         return (
+
             <ImageBackground source={require('../assets/Images/wall.jpg')}
                              style={{width: '100%', height: '100%'}}>
+                <ScrollView>
+
             <View style={styles.container}>
+
                 <View style={styles.header}>
                     <Image
                         source={require('../assets/Images/logo.png')}
@@ -16,7 +20,7 @@ export default class ChoixQuiz extends React.Component {
                     <Text style={styles.headerLabel}>Veuillez choisir une catégorie de Quiz</Text>
                 </View>
                 <View>
-                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuis')}>
+                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuiz')}>
                     <Image
                         source={require('../assets/Images/cours_dev.png')}
 
@@ -39,8 +43,9 @@ export default class ChoixQuiz extends React.Component {
                     </TouchableOpacity>
                 </View>
                 </View>
-
+                </ScrollView>
             </ImageBackground>
+
         )
     }
 }
@@ -52,10 +57,11 @@ const styles = StyleSheet.create({
     header: {
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: 20
+        marginTop: 20,
+
     },
     headerLabel: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
@@ -71,7 +77,7 @@ const styles = StyleSheet.create({
         shadowRadius: 6,
         alignItems:'center',
         marginLeft:60,
-        marginTop:100,
+        marginTop:50,
         width: 300,
         height: 80,
         justifyContent:'center',

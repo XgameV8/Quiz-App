@@ -84,9 +84,11 @@ export default class ProfileScreen extends React.Component {
                                 value={20}
                                 backgroundColorOnComplete="#6CC644"
                             />
+                            <View style={styles.img}>
                             <Image
                                 source={require('../assets/Images/trophy.png')}
                             />
+                            </View>
                         </View>
                     </View>
 
@@ -280,7 +282,8 @@ const styles = StyleSheet.create({
 
     img: {
 
-        marginBottom: 10,
+        marginBottom: 12,
+        marginLeft:15,
     },
 
 });

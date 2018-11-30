@@ -23,7 +23,7 @@ export default class HomeScreen extends React.Component {
 
     async loginWithFacebook() {
         const {type, token} = await Expo.Facebook.logInWithReadPermissionsAsync
-        ('1902257816476632', {permissions: ['public_profile', 'profileURL']})
+        ('1902257816476632', {permissions: ['public_profile']})
         if (type === 'success') {
             const credential = firebase.auth.FacebookAuthProvider.credential(token);
             firebase.auth().signInAndRetrieveDataWithCredential(credential).catch((error) => {
@@ -73,11 +73,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     headerLabel: {
-        fontSize: 16,
+        fontSize: 20,
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#4267B2',
+        color: '#ffdc7f',
     },
     buttons: {
         flex: 1,
