@@ -35,7 +35,7 @@ export default class ProfileScreen extends React.Component {
                     <View style={styles.coinsContainer}>
 
                         <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('ShopCate')}>
+                            onPress={() => this.props.navigation.navigate('ShopCateDev')}>
                             <Image
                                 source={require('../assets/Images/money.png')}
 
@@ -43,7 +43,7 @@ export default class ProfileScreen extends React.Component {
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('ShopCate')}>
+                            onPress={() => this.props.navigation.navigate('ShopCateDev')}>
                             <Text style={styles.quantityCoins}>{this.state.coins}</Text>
 
                         </TouchableOpacity>

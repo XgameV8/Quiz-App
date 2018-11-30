@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity, Image, ImageBackground} from 'react-native';
 
-export default class QuizCate extends React.Component {
+export default class ShopCateDesign extends React.Component {
     render() {
         return (
             <ImageBackground source={require('../assets/Images/wall.jpg')}
@@ -11,7 +11,7 @@ export default class QuizCate extends React.Component {
                         <Text style={styles.headerLabel}>Choisir Catégories</Text>
                     </View>
                     <View style={styles.coursContainer}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('DevQuiz')}>
+                        <TouchableOpacity>
                             <Image
                                 source={require('../assets/Images/bouton_html.png')}
 

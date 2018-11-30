@@ -20,7 +20,7 @@ export default class ChoixQuiz extends React.Component {
                     <Text style={styles.headerLabel}>Veuillez choisir une catégorie de Quiz</Text>
                 </View>
                 <View>
-                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuiz')}>
+                <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('QuizCateDev')}>
                     <Image
                         source={require('../assets/Images/cours_dev.png')}
 
