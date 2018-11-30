@@ -49,7 +49,17 @@ export default class ProfileScreen extends React.Component {
                         </TouchableOpacity>
 
                     </View>
+                    <View style={styles.xpContainer}>
 
+                        <TouchableOpacity
+               >
+                            <Image
+                                source={require('../assets/Images/xp_bar.png')}
+
+                            />
+                        </TouchableOpacity>
+
+                    </View>
                     <View style={styles.userContainer}>
                         <Image
                             source={require('../assets/Images/user.png')}
@@ -285,5 +295,11 @@ const styles = StyleSheet.create({
         marginBottom: 12,
         marginLeft:15,
     },
+
+    xpContainer: {
+        justifyContent:'flex-end',
+        flexDirection: 'row',
+        marginLeft: 20,
+    }
 
 });

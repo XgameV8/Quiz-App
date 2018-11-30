@@ -8,237 +8,66 @@ export default class ShopCate extends React.Component {
                              style={{width: '100%', height: '100%'}}>
             <View style={styles.mainContainer}>
                 <View style={styles.title}>
-                    <Text style={styles.headerLabel}>Developpement web</Text>
+                    <Text style={styles.headerLabel}>Choisir Catégories</Text>
                 </View>
                 <View style={styles.coursContainer}>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/icon_html.png')}
+                            source={require('../assets/Images/bouton_html.png')}
 
                         />
 
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/design.png')}
+                            source={require('../assets/Images/bouton_angular.png')}
                         />
-                        <Text style={styles.buttonsCoursText}>Design</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                                    </TouchableOpacity>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/market.png')}
+                            source={require('../assets/Images/bouton_javascript.png')}
                         />
-                        <Text style={styles.buttonsCoursText}>Marketing</Text>
-                    </TouchableOpacity>
+                                  </TouchableOpacity>
                 </View>
                 <View style={styles.coursContainer}>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/code.png')}
+                            source={require('../assets/Images/bouton_python.png')}
 
                         />
-                        <Text style={styles.buttonsCoursText}>Dev</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                                    </TouchableOpacity>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/design.png')}
+                            source={require('../assets/Images/bouton_java.png')}
                         />
-                        <Text style={styles.buttonsCoursText}>Design</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                              </TouchableOpacity>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/market.png')}
+                            source={require('../assets/Images/bouton_net.png')}
                         />
-                        <Text style={styles.buttonsCoursText}>Marketing</Text>
+
                     </TouchableOpacity>
                 </View>
                 <View style={styles.coursContainer}>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/code.png')}
+                            source={require('../assets/Images/bouton_php.png')}
 
                         />
-                        <Text style={styles.buttonsCoursText}>Dev</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/design.png')}
+                            source={require('../assets/Images/bouton_node.png')}
                         />
-                        <Text style={styles.buttonsCoursText}>Design</Text>
+
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.buttonsCours}>
+                    <TouchableOpacity>
                         <Image
-                            source={require('../assets/Images/market.png')}
+                            source={require('../assets/Images/bouton_react.png')}
                         />
-                        <Text style={styles.buttonsCoursText}>Marketing</Text>
                     </TouchableOpacity>
                 </View>
             </View>
-
-                <View style={styles.mainContainer}>
-                    <View style={styles.title}>
-                        <Text style={styles.headerLabel}>Choisir Catégories</Text>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/icon_html.png')}
-
-                            />
-
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/code.png')}
-
-                            />
-                            <Text style={styles.buttonsCoursText}>Dev</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/code.png')}
-
-                            />
-                            <Text style={styles.buttonsCoursText}>Dev</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
-
-                <View style={styles.mainContainer}>
-                    <View style={styles.title}>
-                        <Text style={styles.headerLabel}>Choisir Catégories</Text>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/icon_html.png')}
-
-                            />
-
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/code.png')}
-
-                            />
-                            <Text style={styles.buttonsCoursText}>Dev</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.coursContainer}>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/code.png')}
-
-                            />
-                            <Text style={styles.buttonsCoursText}>Dev</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/design.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Design</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.buttonsCours}>
-                            <Image
-                                source={require('../assets/Images/market.png')}
-                            />
-                            <Text style={styles.buttonsCoursText}>Marketing</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View>
             </ImageBackground>
         );
     }
@@ -271,9 +100,9 @@ const styles = StyleSheet.create({
     },
 
     coursContainer: {
-        marginTop: 80,
+        marginTop: 60,
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        marginLeft: 20,
 
     },
 
