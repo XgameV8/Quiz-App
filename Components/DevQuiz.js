@@ -1,4 +1,4 @@
-import {devJsonData} from "../assets/Data/devQuizData";
+import {devJsonData} from "../assets/Data/devQuizhtmlE";
 import React from "react";
 import {
     StyleSheet,
@@ -30,7 +30,7 @@ export default class DevQuiz extends React.Component {
 
     _nextQuestion = () => {
         this._scoring();
-        if (this.state.count === 9) {
+        if (this.state.count === 4) {
             this.setState({visible: true})
 
         }
@@ -112,6 +112,8 @@ export default class DevQuiz extends React.Component {
                         this.props.navigation.navigate('ChoixQuiz')
                     }}
                 >
+                    <ImageBackground source={require('../assets/Images/wall.jpg')}
+                                     style={{width: '100%', height: '100%'}}>
                     <View style={styles.ModalScore}>
                         <View style={styles.header}>
                             <Image
@@ -142,25 +144,9 @@ export default class DevQuiz extends React.Component {
 
                             </TouchableOpacity>
                         </View>
-                            <TouchableOpacity
-                                full
-                                rounded
-                                primary
-                                onPress={() => {
-                                    this.props.navigation.navigate('ProfileScreen');
-                                    this.setState({visible: false},
-
-                                )
-                                }}
-                            >
-                                <Text style={{
-                                    color: '#FFF', fontSize: 14,
-                                    fontWeight: 'bold', justifyContent: 'space-between'
-                                }}>Retour à l'accueil</Text>
-
-                            </TouchableOpacity>
 
                     </View>
+                    </ImageBackground>
                 </Modal>
             </View>
             </ImageBackground>
@@ -230,7 +216,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         justifyContent: 'center',
         alignItems: 'center',
-        color: '#4267B2',
+        color: '#FFF',
     },
 
         buttonNextGame: {

@@ -29,7 +29,7 @@ export default class ChoixQuiz extends React.Component {
 
 
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixCours')}>
+                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuizM')}>
                             <View style={styles.imgstar}>
                                 <Image
                                     source={require('../assets/Images/2star.png')}
@@ -38,7 +38,7 @@ export default class ChoixQuiz extends React.Component {
                             <Text style={styles.textquiz}>Moyen</Text>
 
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('ChoixCours')}>
+                        <TouchableOpacity style={styles.buttonquiz} onPress={() => this.props.navigation.navigate('DevQuizH')}>
                             <View style={styles.imgstar}>
                                 <Image
                                     source={require('../assets/Images/3star.png')}
